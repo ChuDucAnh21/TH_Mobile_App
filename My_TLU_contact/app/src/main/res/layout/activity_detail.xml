@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Detail_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="424dp"
+            android:layout_height="268dp"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="258dp">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="118dp"
+                    android:layout_height="105dp"
+
+                    android:background="@drawable/baseline_contacts_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.235"
+                    tools:layout_editor_absoluteX="33dp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/dt_sdt"
+                    android:layout_width="236dp"
+                    android:layout_height="33dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="68dp"
+                    android:drawableStart="@drawable/round_add_ic_call_24"
+                    android:text="sdt"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.045"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toBottomOf="@+id/dt_ten" />
+
+                <TextView
+                    android:id="@+id/dt_ten"
+                    android:layout_width="233dp"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="16dp"
+                    android:drawableStart="@drawable/baseline_attribution_24"
+                    android:gravity="center|left"
+                    android:text="Tên"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/dt_diachi_macb"
+                    android:layout_width="239dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="28dp"
+                    android:drawableStart="@drawable/ic_location_small"
+                    android:gravity="center|left"
+                    android:text="địa chỉ"
+                    app:layout_constraintBottom_toTopOf="@+id/dt_sdt"
+                    app:layout_constraintStart_toEndOf="@+id/imageView6"
+                    app:layout_constraintTop_toBottomOf="@+id/dt_ten"
+                    app:layout_constraintVertical_bias="0.545" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="140dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginBottom="32dp"
+                    app:circularflow_radiusInDP="100dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/baseline_call_24" />
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="138dp"
+                    android:layout_height="45dp"
+                    android:layout_marginBottom="32dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.426"
+                    app:layout_constraintStart_toEndOf="@+id/imageButton"
+                    app:srcCompat="@drawable/baseline_sms_24" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

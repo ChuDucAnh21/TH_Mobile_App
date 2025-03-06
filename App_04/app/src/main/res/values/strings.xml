@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">App_04</string>
+    <string name="nh_p_b">Nhập B</string>
+    <string name="k_t_qu">Kết quả</string>
+    <string name="nh_p_a">Nhập A</string>
+    <string name="t_ng">Tổng</string>
+</resources>
