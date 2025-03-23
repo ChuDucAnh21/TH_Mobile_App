@@ -19,6 +19,7 @@ public class Detail_Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
+
         dt_sdt =(TextView) findViewById(R.id.dt_sdt);
         dt_name = (TextView)findViewById(R.id.dt_ten);
         dt_address_ma =(TextView) findViewById(R.id.dt_diachi_macb);
