@@ -4,23 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp">
+    android:layout_marginBottom="10dp"
+    android:padding="10dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="409dp"
         android:layout_height="227dp"
+        android:background="@drawable/boder"
+        app:cardBackgroundColor="#B2EBFB"
         tools:layout_editor_absoluteX="2dp"
         tools:layout_editor_absoluteY="10dp">
 
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#C6ECFB">
 
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/materialToolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="?attr/colorPrimary"
+                android:background="#1253B4"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
                 tools:layout_editor_absoluteX="0dp"
@@ -31,6 +36,7 @@
                 android:layout_width="111dp"
                 android:layout_height="108dp"
                 android:layout_marginStart="16dp"
+                android:backgroundTint="#BDE4E2"
                 android:scaleType="fitStart"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -40,11 +46,12 @@
 
             <TextView
                 android:id="@+id/cbnv_ma"
-                android:layout_width="153dp"
-                android:layout_height="25dp"
+                android:layout_width="155dp"
+                android:layout_height="24dp"
                 android:layout_marginStart="44dp"
                 android:layout_marginTop="80dp"
                 android:drawableStart="@drawable/ic_staff_directory"
+                android:drawablePadding="10dp"
                 android:text="MaNV"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -56,8 +63,9 @@
                 android:layout_width="157dp"
                 android:layout_height="23dp"
                 android:layout_marginStart="44dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="20dp"
                 android:drawableStart="@drawable/ic_sort"
+                android:drawablePadding="10dp"
                 android:text="TenNV"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -65,26 +73,27 @@
                 app:layout_constraintTop_toBottomOf="@+id/cbnv_ma" />
 
             <TextView
-                android:id="@+id/cbnv_sdt"
+                android:id="@+id/cbnv_ngaysinh"
                 android:layout_width="157dp"
                 android:layout_height="20dp"
                 android:layout_marginStart="44dp"
                 android:layout_marginTop="8dp"
-                android:drawableStart="@drawable/round_add_ic_call_24"
-                android:text="sdt"
+                android:drawableStart="@drawable/baseline_date_range_24"
+                android:drawablePadding="10dp"
+                android:text="ngay sinh"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imageButton5"
                 app:layout_constraintTop_toBottomOf="@+id/cbnv_name"
-                app:layout_constraintVertical_bias="0.095" />
+                app:layout_constraintVertical_bias="0.211" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="320dp"
+                android:layout_marginEnd="296dp"
                 android:text="Information"
                 android:textColor="#F4EEEE"
                 android:textSize="16sp"
@@ -92,8 +101,13 @@
                 app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
                 app:layout_constraintEnd_toEndOf="@+id/materialToolbar"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.357" />
+                app:layout_constraintVertical_bias="0.428" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,11 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="401dp"
         android:layout_height="124dp"
+        android:backgroundTint="#E9E9F8"
         tools:layout_editor_absoluteX="3dp"
         tools:layout_editor_absoluteY="6dp">
 
@@ -17,49 +19,60 @@
 
             <TextView
                 android:id="@+id/dv_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="Tên đơn vị"
+                android:layout_width="220dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="44dp"
+                android:drawableStart="@drawable/baseline_dvr_24"
+                android:drawablePadding="10dp"
+                android:text="name"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/dv_diachi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageView
                 android:id="@+id/imageView4"
-                android:layout_width="43dp"
-                android:layout_height="42dp"
+                android:layout_width="52dp"
+                android:layout_height="55dp"
                 android:layout_margin="20dp"
-                android:layout_marginStart="24dp"
+                android:layout_marginStart="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.128"
                 app:srcCompat="@drawable/ic_unit_icon" />
 
             <TextView
-                android:id="@+id/dv_sdt"
-                android:layout_width="117dp"
+                android:id="@+id/dv_id"
+                android:layout_width="138dp"
                 android:layout_height="21dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="12dp"
-                android:drawableStart="@drawable/ic_phone_small"
-                android:text="Số điện thoại"
+                android:layout_marginStart="20dp"
+                android:drawableStart="@drawable/ic_unit_directory"
+                android:drawablePadding="10dp"
+                android:text="ID"
+                app:layout_constraintBottom_toTopOf="@+id/dv_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imageView4"
-                app:layout_constraintTop_toBottomOf="@+id/dv_name" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/dv_diachi"
-                android:layout_width="117dp"
-                android:layout_height="21dp"
+                android:layout_width="210dp"
+                android:layout_height="24dp"
                 android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
                 android:drawableStart="@drawable/ic_location_small"
+                android:drawablePadding="10dp"
                 android:text="Địa chỉ"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView4"
-                app:layout_constraintTop_toBottomOf="@+id/dv_sdt"
-                app:layout_constraintVertical_bias="0.229" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.005"
+                app:layout_constraintStart_toEndOf="@+id/imageView4" />
 
             <ImageView
                 android:id="@+id/imageView5"

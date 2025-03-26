@@ -5,14 +5,24 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="10dp"
     android:orientation="vertical"
     tools:context=".DonVi.DonVi_Activity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/btn_arrowCBNV"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#09FFFFFF"
+            android:padding="10dp"
+            app:srcCompat="@drawable/baseline_arrow_back_ios_new_24" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -22,38 +32,70 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center|left"
+            android:padding="10dp"
             android:text="TLU Contact"
+            android:textColor="#F0E5E5"
             android:textSize="24dp"
             android:textStyle="bold" />
     </LinearLayout>
 
+    <EditText
+        android:id="@+id/edt_searchCB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/baseline_content_paste_search_24"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Tìm kiếm"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/btn_backcbnv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Back" />
+        android:layout_gravity="right"
+        android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/txt_cbnv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:id="@+id/textView28"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Hiển thị CBNV" />
+            android:text="Sắp xếp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spin_sortCB"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:backgroundTint="#140C0C" />
+
+        <Button
+            android:id="@+id/btn_themCB"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#2A9E1E"
+            android:drawableLeft="@drawable/ic_add"
+            android:text="Thêm"
+            app:cornerRadius="@null" />
+
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcv_cbnv"
+        android:id="@+id/rcv_dv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"

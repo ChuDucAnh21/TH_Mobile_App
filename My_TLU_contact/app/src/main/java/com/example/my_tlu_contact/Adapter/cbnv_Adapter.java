@@ -10,9 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.my_tlu_contact.CBNV.CBNV;
 import com.example.my_tlu_contact.CBNV.CBNV_ViewHolder;
-import com.example.my_tlu_contact.Detail_Activity;
-import com.example.my_tlu_contact.DonVi.DV_ViewHolder;
-import com.example.my_tlu_contact.DonVi.DonVi;
+import com.example.my_tlu_contact.Detail_cbnv_Activity;
 import com.example.my_tlu_contact.R;
 
 public class cbnv_Adapter extends RecyclerView.Adapter<CBNV_ViewHolder>{
@@ -36,10 +34,12 @@ public class cbnv_Adapter extends RecyclerView.Adapter<CBNV_ViewHolder>{
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent detailIntent = new Intent(v.getContext(), Detail_Activity.class);
+                Intent detailIntent = new Intent(v.getContext(), Detail_cbnv_Activity.class);
+                detailIntent.putExtra("ID",cb.getMaCB());
                 detailIntent.putExtra("NAME",cb.getTenCB());
+                detailIntent.putExtra("DATE",cb.getNgaysinhCB());
                 detailIntent.putExtra("PHONE",cb.getSdtCB());
-                detailIntent.putExtra("ADDRESS_MA",cb.getMaCB());
+                detailIntent.putExtra("ADDRESS",cb.getDiachiCB());
                 v.getContext().startActivity(detailIntent);
             }
         });

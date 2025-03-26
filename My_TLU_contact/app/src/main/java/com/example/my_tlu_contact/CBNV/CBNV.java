@@ -1,11 +1,13 @@
 package com.example.my_tlu_contact.CBNV;
 
 public class CBNV {
-    private String maCB,tenCB,sdtCB;
+    private String maCB,tenCB,ngaysinhCB,sdtCB,diachiCB;
 
-    public CBNV(String maCB, String tenCB, String sdtCB) {
+    public CBNV(String maCB, String tenCB, String ngaysinhCB,String sdtCB, String diachiCB) {
         this.maCB = maCB;
         this.tenCB = tenCB;
+        this.ngaysinhCB = ngaysinhCB;
+        this.diachiCB = diachiCB;
         this.sdtCB = sdtCB;
     }
 
@@ -25,11 +27,27 @@ public class CBNV {
         this.tenCB = tenCB;
     }
 
+    public String getNgaysinhCB() {
+        return ngaysinhCB;
+    }
+
+    public void setNgaysinhCB(String ngaysinhCB) {
+        this.ngaysinhCB = ngaysinhCB;
+    }
+
     public String getSdtCB() {
         return sdtCB;
     }
 
     public void setSdtCB(String sdtCB) {
         this.sdtCB = sdtCB;
+    }
+
+    public String getDiachiCB() {
+        return diachiCB;
+    }
+
+    public void setDiachiCB(String diachiCB) {
+        this.diachiCB = diachiCB;
     }
 }

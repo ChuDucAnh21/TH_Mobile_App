@@ -6,9 +6,27 @@
     tools:context=".Running_Fragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="137dp"
+            android:layout_height="49dp"
+            android:text="RUNNING"
+            android:textSize="24sp"
+            tools:layout_editor_absoluteX="147dp"
+            tools:layout_editor_absoluteY="274dp" />
+
+        <Button
+            android:id="@+id/btn_toat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toast"
+            tools:layout_editor_absoluteX="161dp"
+            tools:layout_editor_absoluteY="341dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

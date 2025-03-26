@@ -32,6 +32,9 @@ android {
 }
 
 dependencies {
+    implementation ("org.greenrobot:eventbus:3.3.1")
+    implementation ("com.airbnb.android:lottie:5.2.0")
+    implementation ("com.google.android.material:material:1.9.0")
     implementation("com.google.android.material:material:1.12.0")
     implementation ("com.github.bumptech.glide:glide:4.12.0")
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")

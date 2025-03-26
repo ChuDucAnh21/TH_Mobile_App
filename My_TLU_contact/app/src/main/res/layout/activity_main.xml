@@ -5,8 +5,7 @@
 
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="10dp">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,11 +18,11 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
             android:backgroundTint="@color/colorPrimary"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="15dp">
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -43,42 +42,45 @@
                 android:textStyle="bold" />
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/imgbtn_account"
                 android:layout_width="34dp"
-                android:layout_height="36dp"
+                android:layout_height="match_parent"
                 android:backgroundTint="#00FFFFFF"
                 android:contentDescription="@string/image_description"
-                app:srcCompat="@android:drawable/ic_popup_reminder" />
+                android:padding="10dp"
+                app:srcCompat="@drawable/baseline_manage_accounts_24" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="516dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="match_parent"
             android:gravity="clip_horizontal|center"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/crv_dv"
                 android:layout_width="228dp"
-                android:layout_height="177dp">
+                android:layout_height="177dp"
+                app:cardBackgroundColor="#A1D7ED">
 
-                <RelativeLayout
+                <ImageView
+                    android:id="@+id/imageView7"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/screenshot_2025_03_20_001135" />
 
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:layout_alignParentEnd="false"
-                        android:layout_alignParentBottom="true"
-                        android:gravity="center"
-                        android:text="Danh bạ đơn vị"
-                        android:textStyle="bold"
-                        tools:ignore="DuplicateIds" />
-
-                </RelativeLayout>
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:paddingBottom="15dp"
+                    android:text="Danh bạ đơn vị"
+                    android:textColor="#E9DEDE"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
 
             </androidx.cardview.widget.CardView>
 
@@ -86,25 +88,27 @@
                 android:id="@+id/crv_cbnv"
                 android:layout_width="228dp"
                 android:layout_height="177dp"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="#A1D7ED">
 
-                <RelativeLayout
+                <ImageView
+                    android:id="@+id/imageView8"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/screenshot_2025_03_20_001135" />
 
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="match_parent"
-                        android:layout_height="149dp"
-                        android:layout_alignParentEnd="false"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginBottom="0dp"
-                        android:gravity="center"
-                        android:text="Danh bạ CBNV"
-                        android:textStyle="bold"
-                        tools:ignore="DuplicateIds" />
-
-                </RelativeLayout>
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom|center"
+                    android:paddingBottom="15dp"
+                    android:text="Danh bạ CBNV"
+                    android:textColor="#E9DEDE"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:ignore="DuplicateIds" />
 
             </androidx.cardview.widget.CardView>
 

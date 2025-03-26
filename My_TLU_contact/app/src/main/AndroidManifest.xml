@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permision.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,16 +20,34 @@
         android:theme="@style/Theme.My_TLU_contact"
         tools:targetApi="31">
         <activity
+            android:name=".User_Login.detail_user_activity"
+            android:exported="false" />
+        <activity
+            android:name=".User_Login.Register_activity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activate.activity_add_DV"
+            android:exported="false" />
+        <activity
+            android:name=".Activate.activity_add_CB"
+            android:exported="false" />
+        <activity
+            android:name=".Detail_dv_Activity"
+            android:exported="false" />
+        <activity
             android:name=".CBNV.CBNV_Activity"
             android:exported="false" />
         <activity
-            android:name=".Detail_Activity"
+            android:name=".Detail_cbnv_Activity"
             android:exported="false" />
         <activity
             android:name=".DonVi.DonVi_Activity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".User_Login.Login_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

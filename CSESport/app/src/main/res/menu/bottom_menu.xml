@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/btn_running"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="running" />
+    <item
+        android:id="@+id/btn_recyline"
+        android:icon="@android:drawable/ic_menu_call"
+        android:title="recycline" />
+    <item
+        android:id="@+id/btn_sleep"
+        android:icon="@drawable/baseline_airline_seat_recline_extra_24"
+        android:title="sleep" />
 </menu>

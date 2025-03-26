@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
         public void countUp(){
             String x  = tx_count.getText().toString();
+
             int value = Integer.parseInt(x) + 1;
 
             tx_count.setText(String.valueOf(value));

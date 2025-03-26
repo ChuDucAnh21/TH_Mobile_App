@@ -14,7 +14,7 @@
         android:layout_margin="8dp"
         android:background="#FFEB3B"
         android:gravity="center"
-        android:text="10"
+        android:text="0"
         android:textAlignment="center"
         android:textColor="#2196F3"
         android:textSize="180dp"
@@ -34,11 +34,13 @@
         android:text="TOAST"
         android:textSize="18dp"
         android:textStyle="bold"
+        android:onClick="countUp"
         app:circularflow_radiusInDP="0"
         app:cornerRadius="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
 
     <Button
         android:id="@+id/btn_count"
