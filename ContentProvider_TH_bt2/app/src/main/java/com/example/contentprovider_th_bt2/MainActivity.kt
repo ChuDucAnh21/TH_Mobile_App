@@ -1,37 +1,53 @@
 package com.example.contentprovider_th_bt2
 
+import android.Manifest
+import android.content.pm.PackageManager
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.contentprovider_th_bt2.ui.theme.ContentProvider_TH_bt2Theme
+import android.widget.Toast
+//import androidx.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
+    private val REQUEST_CODE_PERMISSIONS = 1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.acivity_main)
 
+        checkAndRequestPermissions()
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+    private fun checkAndRequestPermissions() {
+        val permissions = arrayOf(
+            Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.SEND_SMS
+        )
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    ContentProvider_TH_bt2Theme {
-        Greeting("Android")
+        val permissionsToRequest = permissions.filter {
+            ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED
+        }
+
+        if (permissionsToRequest.isNotEmpty()) {
+            ActivityCompat.requestPermissions(this, permissionsToRequest.toTypedArray(), REQUEST_CODE_PERMISSIONS)
+        }
     }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == REQUEST_CODE_PERMISSIONS) {
+            if (grantResults.all { it == PackageManager.PERMISSION_GRANTED }) {
+                Toast.makeText(this, "Quyền đã được cấp", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Ứng dụng cần quyền để hoạt động", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
 }

@@ -1,0 +1,1 @@
+open annotation class AppCompatActivity
