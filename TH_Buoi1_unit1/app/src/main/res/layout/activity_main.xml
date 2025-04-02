@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:background="#FFEB3B"
+        android:gravity="center"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="#2196F3"
+        android:textSize="180dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_toast" />
+
+    <Button
+        android:id="@+id/btn_toast"
+        android:layout_width="0dp"
+        android:layout_height="59dp"
+        android:layout_margin="8dp"
+        android:background="#990C0C"
+        android:padding="8dp"
+        android:text="TOAST"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:onClick="countUp"
+        app:circularflow_radiusInDP="0"
+        app:cornerRadius="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/btn_count"
+        android:layout_width="0dp"
+        android:layout_height="61dp"
+        android:layout_margin="8dp"
+        android:background="#B61243"
+        android:backgroundTint="#E9D6D6"
+        android:text="COUNT"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:cornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

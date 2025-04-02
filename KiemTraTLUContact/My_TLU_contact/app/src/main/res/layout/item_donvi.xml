@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="401dp"
+        android:layout_height="124dp"
+        android:backgroundTint="#E9E9F8"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="6dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="393dp"
+            android:layout_height="113dp">
+
+            <TextView
+                android:id="@+id/dv_name"
+                android:layout_width="220dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="44dp"
+                android:drawableStart="@drawable/baseline_dvr_24"
+                android:drawablePadding="10dp"
+                android:text="name"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/dv_diachi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="52dp"
+                android:layout_height="55dp"
+                android:layout_margin="20dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_unit_icon" />
+
+            <TextView
+                android:id="@+id/dv_id"
+                android:layout_width="138dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="20dp"
+                android:drawableStart="@drawable/ic_unit_directory"
+                android:drawablePadding="10dp"
+                android:text="ID"
+                app:layout_constraintBottom_toTopOf="@+id/dv_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/dv_diachi"
+                android:layout_width="210dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:drawableStart="@drawable/ic_location_small"
+                android:drawablePadding="10dp"
+                android:text="Địa chỉ"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.005"
+                app:layout_constraintStart_toEndOf="@+id/imageView4" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="34dp"
+                android:layout_height="38dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.466"
+                app:srcCompat="@drawable/ic_arrow_right" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
